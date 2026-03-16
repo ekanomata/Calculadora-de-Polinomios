@@ -1,8 +1,5 @@
-/* MACKENZIE HIGIENÓPOLIS - 02P11 - 2° SEMESTRE - ALG & PROG II
-NOMES: 
-Eric Kanomata Schutz Cabrera | RA: 10736688
-Pedro Henrique da Silva Lima | RA: 10744246 
-*/
+// MACKENZIE HIGIENÓPOLIS - 02P11 - 2° SEMESTRE - ALG & PROG II
+
 
 #include <stdio.h>
 #include <stdlib.h>
