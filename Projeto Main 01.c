@@ -1,4 +1,4 @@
-/* MACKENZIE HIGIEN”POLIS - 02P11 - 2∞ SEMESTRE - ALG & PROG II
+/* MACKENZIE HIGIEN√ìPOLIS - 02P11 - 2¬∞ SEMESTRE - ALG & PROG II
 NOMES: 
 Eric Kanomata Schutz Cabrera | RA: 10736688
 Pedro Henrique da Silva Lima | RA: 10744246 
@@ -8,7 +8,7 @@ Pedro Henrique da Silva Lima | RA: 10744246
 #include <stdlib.h>
 #include <math.h>
 
-// FunÁ„o para criar e atualizar o PolinÙmio
+// Fun√ß√£o para criar e atualizar o Polin√¥mio
 void attPoli (int poli[], int * grau) {
 	printf("\nDigite o grau do polinomio: ");
 	scanf("%d", grau);
@@ -28,14 +28,14 @@ void attPoli (int poli[], int * grau) {
 	printf("\n");
 }
 
-// FunÁ„o para imprimir o PolinÙmio
+// Fun√ß√£o para imprimir o Polin√¥mio
 void printPoli (int poli[], int grau) {
 	
 	int printed = 0;
 	printf("> ");
 	
-	for (int a = grau; a >= 0; a--) { // Loop para apresentar o polinÙmio em uma linha
-		// Condicional n.1 para evitar erros quando o grau do polinÙmio for muito baixo (1∞ ou 2∞ grau)
+	for (int a = grau; a >= 0; a--) { // Loop para apresentar o polin√¥mio em uma linha
+		// Condicional n.1 para evitar erros quando o grau do polin√¥mio for muito baixo (1¬∞ ou 2¬∞ grau)
 		if (poli[a] == 0) {
 			continue;
 		}
@@ -54,17 +54,17 @@ void printPoli (int poli[], int grau) {
 	printf("\n");
 }
 
-// FunÁ„o para calcular o valor do PolinÙmio
+// Fun√ß√£o para calcular o valor do Polin√¥mio
 void valorPoli (int poli1[], int grau1, int x) {
 	
 	float resultados[50] = {}; // Array para poder somar a linha de resultados
-	int r1 = 0; // Vari·vel para adicionar itens na lista de resultados
-	float resultado_valor = 0; // V·riavel para apresentar o resultado do valor total somado 
+	int r1 = 0; // Vari√°vel para adicionar itens na lista de resultados
+	float resultado_valor = 0; // V√°riavel para apresentar o resultado do valor total somado 
 	int printed = 0;
 
 	printf("\n"); // Nova linha 
 	printf("P(%d) = ", x);
-	for (int a = grau1; a >= 0; a--) { // Loop para apresentar a primeira linha do c·lculo \ SubstituiÁ„o
+	for (int a = grau1; a >= 0; a--) { // Loop para apresentar a primeira linha do c√°lculo \ Substitui√ß√£o
 		if (printed && poli1[a] > 0) {
 			printf(" +");
 		}
@@ -86,7 +86,7 @@ void valorPoli (int poli1[], int grau1, int x) {
 		printed = 0;
 		printf("\n\n"); // Nova linha 
 		printf("P(%d) = ", x);
-		for (int a = grau1; a >= 0; a--) { // Loop para apresentar a segunda linha do c·lculo \ Resultado das PotÍncias
+		for (int a = grau1; a >= 0; a--) { // Loop para apresentar a segunda linha do c√°lculo \ Resultado das Pot√™ncias
 			if (printed && poli1[a] > 0) {
 				printf(" +");
 			}
@@ -107,7 +107,7 @@ void valorPoli (int poli1[], int grau1, int x) {
 	printf("\n\n"); // Nova linha
 	printf("P(%d) = ", x);
 	printed = 0;
-	for (int a = grau1; a >= 0; a--) { // Loop para apresentar a terceira linha do c·lculo \ Resultados das MultiplicaÁıes
+	for (int a = grau1; a >= 0; a--) { // Loop para apresentar a terceira linha do c√°lculo \ Resultados das Multiplica√ß√µes
 		if (poli1[a] == 0) {
 			continue;
 		} else if (a == 0) {
@@ -131,55 +131,55 @@ void valorPoli (int poli1[], int grau1, int x) {
 	}
 	
 	printf("\n\n"); // Nova linha
-	for (int a = grau1; a >= 0; a--) { // Loop para apresentar a ˙ltima linha do c·lculo \ Resultado das Somas
+	for (int a = grau1; a >= 0; a--) { // Loop para apresentar a √∫ltima linha do c√°lculo \ Resultado das Somas
 			resultado_valor = resultado_valor + resultados[a];
 	}
 	
 	printf("P(%d) =  %.0f", x, resultado_valor);
 }
 
-// FunÁ„o para calcular a soma de PolinÙmios
+// Fun√ß√£o para calcular a soma de Polin√¥mios
 void somaPoli(int poli1[], int grau1, int poli2[], int grau2) {
 	
     int maiorGrau = (grau1 > grau2) ? grau1 : grau2; // Modelo simplificado de "if-else"; if (grau1 > grau2), maiorGrau = grau1, else maiorGrau = grau2
-    int printed = 0; // CriaÁ„o de vari·vel para adiÁ„o do sÌmbolo "+" sem dar erros
+    int printed = 0; // Cria√ß√£o de vari√°vel para adi√ß√£o do s√≠mbolo "+" sem dar erros
     
     printf("\n"); // Nova linha
     
-    for (int a = maiorGrau; a >= 0; a--) { // Loop para a primeira linha (VisualizaÁ„o das somas)
+    for (int a = maiorGrau; a >= 0; a--) { // Loop para a primeira linha (Visualiza√ß√£o das somas)
     	
-    	int authPoli1 = a <= grau1; // CriaÁ„o de varÌavel para evitar erros durante a execuÁ„o
-    	int authPoli2 = a <= grau2; // (Verifica se o n∞ atual existe dentro das listas)
+    	int authPoli1 = a <= grau1; // Cria√ß√£o de var√≠avel para evitar erros durante a execu√ß√£o
+    	int authPoli2 = a <= grau2; // (Verifica se o n¬∞ atual existe dentro das listas)
     	
-    	if (poli1[a] == 0 && poli2[a] == 0) { // Se ambos os n˙meros das listas forem 0, pula
+    	if (poli1[a] == 0 && poli2[a] == 0) { // Se ambos os n√∫meros das listas forem 0, pula
     		continue;
 		}
 		
     	if (authPoli1 && authPoli2) {
     		if (printed) {
-    			printf(" + "); // Printa o sinal de adiÁ„o entre as operaÁıes SE j· tiver sido printado um n˙mero antes
+    			printf(" + "); // Printa o sinal de adi√ß√£o entre as opera√ß√µes SE j√° tiver sido printado um n√∫mero antes
 			}
     		if (a == 0) {
 				printf("(%d", poli1[a]);
-				if (poli2[a] >= 0) { // CondiÁ„o para n„o adicionar o sinal de adiÁ„o quando o n˙mero j· tiver o sinal negativo 
+				if (poli2[a] >= 0) { // Condi√ß√£o para n√£o adicionar o sinal de adi√ß√£o quando o n√∫mero j√° tiver o sinal negativo 
 					printf(" + ");
 				}
 				printf("%d)",poli2[a]);
 			} else if (a == 1) {
 				printf("(%d", poli1[a]);
-				if (poli2[a] >= 0) { // CondiÁ„o para n„o adicionar o sinal de adiÁ„o quando o n˙mero j· tiver o sinal negativo 
+				if (poli2[a] >= 0) { // Condi√ß√£o para n√£o adicionar o sinal de adi√ß√£o quando o n√∫mero j√° tiver o sinal negativo 
 					printf(" + ");
 				}
 				printf("%d)x",poli2[a]);
 			} else if (a > 1) {
 				printf("(%d", poli1[a]);
-				if (poli2[a] >= 0) { // CondiÁ„o para n„o adicionar o sinal de adiÁ„o quando o n˙mero j· tiver o sinal negativo 
+				if (poli2[a] >= 0) { // Condi√ß√£o para n√£o adicionar o sinal de adi√ß√£o quando o n√∫mero j√° tiver o sinal negativo 
 					printf(" + ");
 				}
 				printf("%d)x^%d",poli2[a], a);
 			}
 			
-		} else if (authPoli1 && !authPoli2) { // Verifica os n˙meros que est„o fora do range do Polinomio 2
+		} else if (authPoli1 && !authPoli2) { // Verifica os n√∫meros que est√£o fora do range do Polinomio 2
 				if (printed && poli1[a] > 0) {
 					printf(" + ");
 				}
@@ -190,7 +190,7 @@ void somaPoli(int poli1[], int grau1, int poli2[], int grau2) {
 				} else if (a >= 1) {
 					printf("%dx^%d", poli1[a], a);
 				}
-		} else if (!authPoli1 && authPoli2) { // Verifica os n˙meros que est„o fora do range do Polinomio 1
+		} else if (!authPoli1 && authPoli2) { // Verifica os n√∫meros que est√£o fora do range do Polinomio 1
 				if (printed && poli2[a] > 0) {
 					printf(" + ");
 				}
@@ -209,16 +209,16 @@ void somaPoli(int poli1[], int grau1, int poli2[], int grau2) {
 	printed = 0;
 	for (int a = maiorGrau; a >= 0; a--) { // Loop para a segunda linha (Resultado das somas)
     	
-    	int authPoli1 = a <= grau1; // CriaÁ„o de varÌavel para evitar erros durante a execuÁ„o
-    	int authPoli2 = a <= grau2; // (Verifica se o n∞ atual existe dentro das listas)
+    	int authPoli1 = a <= grau1; // Cria√ß√£o de var√≠avel para evitar erros durante a execu√ß√£o
+    	int authPoli2 = a <= grau2; // (Verifica se o n¬∞ atual existe dentro das listas)
     	
-    	if (poli1[a] == 0 && poli2[a] == 0) { // Se ambos os n˙meros das listas forem 0, pula
+    	if (poli1[a] == 0 && poli2[a] == 0) { // Se ambos os n√∫meros das listas forem 0, pula
     		continue;
 		}
 		
     	if (authPoli1 && authPoli2) {
     		if (printed) {
-    			printf(" + "); // Printa o sinal de adiÁ„o entre as operaÁıes SE j· tiver sido printado um n˙mero antes
+    			printf(" + "); // Printa o sinal de adi√ß√£o entre as opera√ß√µes SE j√° tiver sido printado um n√∫mero antes
 			}
     		if (a == 0) {
 				printf("%d", poli1[a] + poli2[a]);
@@ -255,73 +255,73 @@ void somaPoli(int poli1[], int grau1, int poli2[], int grau2) {
 	}
 }
 	
-// FunÁ„o para calcular a multiplicaÁ„o de PolinÙmios
+// Fun√ß√£o para calcular a multiplica√ß√£o de Polin√¥mios
 void multiPoli (int poli1[], int grau1, int poli2[], int grau2) {
 	
-	int printed = 0; // Reiniciando Vari·vel
-	int grauResultante = grau1 + grau2; // Tamanho m·ximo da multiplicaÁ„o de dois polinÙmios È a soma dos graus
-	int poliResultante[grauResultante + 1]; // CriaÁ„o da array para o polinÙmio resultante
+	int printed = 0; // Reiniciando Vari√°vel
+	int grauResultante = grau1 + grau2; // Tamanho m√°ximo da multiplica√ß√£o de dois polin√¥mios √© a soma dos graus
+	int poliResultante[grauResultante + 1]; // Cria√ß√£o da array para o polin√¥mio resultante
 	
 	printf("\n"); // Nova linha
-	printf("P(x) * Q(x) = "); // Express„o a ser calculada
+	printf("P(x) * Q(x) = "); // Express√£o a ser calculada
 	
-	for (int a = grau1; a >= 0; a--) { // Loop para a primeira parte da primeira linha (antes do parÍnteses)
-		if (poli1[a] == 0) { // Se o n˙mero for zero, pula
+	for (int a = grau1; a >= 0; a--) { // Loop para a primeira parte da primeira linha (antes do par√™nteses)
+		if (poli1[a] == 0) { // Se o n√∫mero for zero, pula
 			continue;
 		}
-		if (poli1[a] > 0 && printed) { // Adiciona sinal se o n˙mero n„o for negativo e se n„o for o primeiro
+		if (poli1[a] > 0 && printed) { // Adiciona sinal se o n√∫mero n√£o for negativo e se n√£o for o primeiro
 			printf("+ ");
 		}
 		if (a == 0) {
 			printf("%d(", poli1[a]); // Termo Independente
 		} else if (a == 1) {
-			printf("%dx(", poli1[a]); // X sem potÍncia (Pen˙ltimo)
+			printf("%dx(", poli1[a]); // X sem pot√™ncia (Pen√∫ltimo)
 		} else if (a > 1) {
-			printf("%dx^%d(", poli1[a], a); // X com potÍncia (Todos tirando ˙ltimo e pen˙ltimo)
+			printf("%dx^%d(", poli1[a], a); // X com pot√™ncia (Todos tirando √∫ltimo e pen√∫ltimo)
 		}
-		for (int b = grau2; b >= 0; b--) { // Parte de dentro do parÍnteses
+		for (int b = grau2; b >= 0; b--) { // Parte de dentro do par√™nteses
 				if (poli2[b] == 0) { // Se for zero, pula
 					continue;
 				}
 				if (b == 0) {
 					printf("%d", poli2[b]); // Termo Independente
 				} else if (b == 1) {
-					printf("%dx", poli2[b]); // X sem potÍncia (Pen˙ltimo)
+					printf("%dx", poli2[b]); // X sem pot√™ncia (Pen√∫ltimo)
 				} else if (b > 1) {
-					printf("%dx^%d", poli2[b], b); // X com potÍncia (Todos tirando ˙ltimo e pen˙ltimo)
+					printf("%dx^%d", poli2[b], b); // X com pot√™ncia (Todos tirando √∫ltimo e pen√∫ltimo)
 				}
 				if (poli2[b] > 0 && poli2[b - 1] > 0 && b != 0) {
 					printf(" + ");
 				}
 			}
-		printf(") "); // Fecha parÍnteses	
+		printf(") "); // Fecha par√™nteses	
 		printed = 1;	
 	}
 	
 	printf("\n\n"); // Nova linha
-	printf("P(x) * Q(x) = "); // Express„o a ser calculada
+	printf("P(x) * Q(x) = "); // Express√£o a ser calculada
 	
-	printed = 0; // Reiniciando vari·vel
+	printed = 0; // Reiniciando vari√°vel
 	
 	for (int a = grau1; a >= 0; a--) { // Loop para a segunda linha 
 		if (poli1[a] == 0) { // Se for zero, pula
 			continue;
 		}
-		if (poli1[a] > 0 && printed) { // Adiciona sinal se n„o for negativo e se n„o for o primeiro
+		if (poli1[a] > 0 && printed) { // Adiciona sinal se n√£o for negativo e se n√£o for o primeiro
 			printf(" + ");
 		}
 		if (a == 0) {
 			for (int b = grau2; b >= 0; b--) {
-				printf("%d * ", poli1[a]); // Adiciona o termo independente vezes os n˙meros do outro polinÙmio a serem multiplicados
+				printf("%d * ", poli1[a]); // Adiciona o termo independente vezes os n√∫meros do outro polin√¥mio a serem multiplicados
 				if (poli2[b] == 0) { // Se for zero, pula
 					continue;
 				}
 				if (b == 0) {
 					printf("%d ", poli2[b]); // Termo independente
 				} else if (b == 1) {
-					printf("%dx ", poli2[b]); // X sem potÍncia (Pen˙ltimo)
+					printf("%dx ", poli2[b]); // X sem pot√™ncia (Pen√∫ltimo)
 				} else if (b > 1) {
-					printf("%dx^%d ", poli2[b], b); // X com potÍncia (Todos menos ˙ltimo e pen˙ltimo)
+					printf("%dx^%d ", poli2[b], b); // X com pot√™ncia (Todos menos √∫ltimo e pen√∫ltimo)
 				}
 				if (poli2[b] > 0 && poli2[b - 1] > 0 && b != 0 && poli1[a] > 0) {
 					printf("+ ");
@@ -329,36 +329,36 @@ void multiPoli (int poli1[], int grau1, int poli2[], int grau2) {
 			}
 		} else if (a == 1) {
 			for (int b = grau2; b >= 0; b--) {
-				printf("%dx * ", poli1[a]); // Adiciona o "x sem potÍncia" vezes os n˙meros do outro polinÙmio a serem multiplicados
+				printf("%dx * ", poli1[a]); // Adiciona o "x sem pot√™ncia" vezes os n√∫meros do outro polin√¥mio a serem multiplicados
 				if (poli2[b] == 0) { // Se for zero, pula
 					continue;
 				}
 				if (b == 0) {
 					printf("%d ", poli2[b]); // Termo independente
 				} else if (b == 1) {
-					printf("%dx ", poli2[b]); // X sem potÍncia (Pen˙ltimo)
+					printf("%dx ", poli2[b]); // X sem pot√™ncia (Pen√∫ltimo)
 				} else if (b > 1) {
-					printf("%dx^%d ", poli2[b], b); // X com potÍncia (Todos menos ˙ltimo e pen˙ltimo)
+					printf("%dx^%d ", poli2[b], b); // X com pot√™ncia (Todos menos √∫ltimo e pen√∫ltimo)
 				}
-				// AdiÁ„o de sinal se: poli1 e poli2 forem > 0, se n„o for o ˙ltimo da poli2 e se o prÛximo n˙mero for positivo
+				// Adi√ß√£o de sinal se: poli1 e poli2 forem > 0, se n√£o for o √∫ltimo da poli2 e se o pr√≥ximo n√∫mero for positivo
 				if (poli2[b] > 0 && poli2[b - 1] > 0 && b != 0 && poli1[a] > 0) { 
 					printf("+ ");
 				}
 			}
 		} else if (a > 1) {
 			for (int b = grau2; b >= 0; b--) {
-				printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com potÍncia" vezes os n˙meros do outro polinÙmio a serem multiplicados
+				printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com pot√™ncia" vezes os n√∫meros do outro polin√¥mio a serem multiplicados
 				if (poli2[b] == 0) {
 					continue;
 				}
 				if (b == 0) {
 					printf("%d ", poli2[b]); // Termo independente 
 				} else if (b == 1) {
-					printf("%dx ", poli2[b]); // X sem potÍncia (Pen˙ltimo)
+					printf("%dx ", poli2[b]); // X sem pot√™ncia (Pen√∫ltimo)
 				} else if (b > 1) {
-					printf("%dx^%d ", poli2[b], b); // X com potÍncia (Todos menos ˙ltimo e pen˙ltimo)
+					printf("%dx^%d ", poli2[b], b); // X com pot√™ncia (Todos menos √∫ltimo e pen√∫ltimo)
 				}
-				// AdiÁ„o de sinal se: poli1 e poli2 forem > 0, se n„o for o ˙ltimo da poli2 e se o prÛximo n˙mero for positivo
+				// Adi√ß√£o de sinal se: poli1 e poli2 forem > 0, se n√£o for o √∫ltimo da poli2 e se o pr√≥ximo n√∫mero for positivo
 				if (poli2[b] > 0 && poli2[b - 1] > 0 && b != 0 && poli1[a] > 0) {
 					printf("+ ");
 				}
@@ -368,20 +368,20 @@ void multiPoli (int poli1[], int grau1, int poli2[], int grau2) {
 	}
 	
 	printf("\n\n"); // Nova linha
-	printf("P(x) * Q(x) = "); // Express„o a ser calculada
+	printf("P(x) * Q(x) = "); // Express√£o a ser calculada
 	
-	printed = 0; // Reiniciando vari·vel
+	printed = 0; // Reiniciando vari√°vel
 	
 	for (int a = grau1; a >= 0; a--) { // Loop para a terceira linha 
 		if (poli1[a] == 0) { // Se for zero, pula
 			continue;
 		}
-		if (poli1[a] > 0 && printed) { // Adiciona sinal se n„o for negativo e se n„o for o primeiro
+		if (poli1[a] > 0 && printed) { // Adiciona sinal se n√£o for negativo e se n√£o for o primeiro
 			printf(" + ");
 		}
 		if (a == 0) {
 			for (int b = grau2; b >= 0; b--) {
-				// printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com potÍncia" vezes os n˙meros do outro polinÙmio a serem multiplicados
+				// printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com pot√™ncia" vezes os n√∫meros do outro polin√¥mio a serem multiplicados
 				if (poli2[b] == 0) {
 					continue;
 				}
@@ -392,14 +392,14 @@ void multiPoli (int poli1[], int grau1, int poli2[], int grau2) {
 				} else if (b > 1) {
 					printf("%dx^%d", poli1[a] * poli2[b], b);
 				}
-				// AdiÁ„o de sinal se: poli1 e poli2 forem > 0, se n„o for o ˙ltimo da poli2 e se o prÛximo n˙mero for positivo
+				// Adi√ß√£o de sinal se: poli1 e poli2 forem > 0, se n√£o for o √∫ltimo da poli2 e se o pr√≥ximo n√∫mero for positivo
 				if (poli2[b] > 0 && poli2[b - 1] > 0 && b != 0 && poli1[a] > 0) {
 					printf(" + ");
 				}
 			}
 		} else if (a == 1) {
 			for (int b = grau2; b >= 0; b--) {
-				// printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com potÍncia" vezes os n˙meros do outro polinÙmio a serem multiplicados
+				// printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com pot√™ncia" vezes os n√∫meros do outro polin√¥mio a serem multiplicados
 				if (poli2[b] == 0) {
 					continue;
 				}
@@ -408,20 +408,20 @@ void multiPoli (int poli1[], int grau1, int poli2[], int grau2) {
 				} else if (b >= 1) {
 					printf("%dx^%d", poli1[a] * poli2[b], a + b);
 				} 
-				// AdiÁ„o de sinal se: poli1 e poli2 forem > 0, se n„o for o ˙ltimo da poli2 e se o prÛximo n˙mero for positivo
+				// Adi√ß√£o de sinal se: poli1 e poli2 forem > 0, se n√£o for o √∫ltimo da poli2 e se o pr√≥ximo n√∫mero for positivo
 				if (poli2[b] > 0 && poli2[b - 1] > 0 && b != 0 && poli1[a] > 0) {
 					printf(" + ");
 				}
 			}
 		} else if (a > 1) {
 			for (int b = grau2; b >= 0; b--) {
-				// printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com potÍncia" vezes os n˙meros do outro polinÙmio a serem multiplicados
+				// printf("%dx^%d * ", poli1[a], a) ; // Adiciona o "x com pot√™ncia" vezes os n√∫meros do outro polin√¥mio a serem multiplicados
 				if (poli2[b] == 0) {
 					continue;
 				}	
 				printf("%dx^%d", poli1[a] * poli2[b], a + b);
 				
-				// AdiÁ„o de sinal se: poli1 e poli2 forem > 0, se n„o for o ˙ltimo da poli2 e se o prÛximo n˙mero for positivo
+				// Adi√ß√£o de sinal se: poli1 e poli2 forem > 0, se n√£o for o √∫ltimo da poli2 e se o pr√≥ximo n√∫mero for positivo
 				if (poli2[b] > 0 && poli2[b - 1] > 0 && b != 0 && poli1[a] > 0) {
 					printf(" + ");
 				}
@@ -430,48 +430,48 @@ void multiPoli (int poli1[], int grau1, int poli2[], int grau2) {
 		printed = 1; 
 	}
 	
-	printed = 0; // Reiniciando Vari·vel
+	printed = 0; // Reiniciando Vari√°vel
 	
 		
 	for (int a = 0; a <= grauResultante; a++) { // Zerando a array (Estava dando output errado)
 	    poliResultante[a] = 0; 
 	}
 	
-	for (int a = 0; a <= grau1; a++) { // Percorre cada n∞ em Poli 1
-	    for (int b = 0; b <= grau2; b++) { // Percorre cada n∞ em Poli 2
+	for (int a = 0; a <= grau1; a++) { // Percorre cada n¬∞ em Poli 1
+	    for (int b = 0; b <= grau2; b++) { // Percorre cada n¬∞ em Poli 2
 	        poliResultante[a + b] += poli1[a] * poli2[b]; 
-	        // Adiciona e soma o resultado dentro da lista resultante (como È o mesmo Ìndice, eles v„o se somando)
+	        // Adiciona e soma o resultado dentro da lista resultante (como √© o mesmo √≠ndice, eles v√£o se somando)
 		}
 	}
 	
 	printf("\n\n"); // Nova linha
 	printf("P(x) * Q(x) = "); 
 	
-	for (int c = grauResultante; c >= 0; c--) { // Loop para a quarta linha (OrdenaÁ„o)
+	for (int c = grauResultante; c >= 0; c--) { // Loop para a quarta linha (Ordena√ß√£o)
 	    if (poliResultante[c] == 0) { // Se for zero, pula
 			continue;
 		}
 	
-	    if (poliResultante[c] > 0 && printed) { // Adiciona sÌmbolo "+" se o n∞ atual for positivo e n„o for o primeiro
+	    if (poliResultante[c] > 0 && printed) { // Adiciona s√≠mbolo "+" se o n¬∞ atual for positivo e n√£o for o primeiro
 	        	printf(" + ");
 	    }
 	    if (c == 0) { // Termo Independente
 	        printf("%d", poliResultante[c]);
 	    }
-	    else if (c == 1) { // X sem potÍncia (Pen˙ltimo)
+	    else if (c == 1) { // X sem pot√™ncia (Pen√∫ltimo)
 	        printf("%dx", poliResultante[c]);
 	    }
-	    else { // X com potÍncia (todos menos ˙ltimo e antepen˙ltimo)
+	    else { // X com pot√™ncia (todos menos √∫ltimo e antepen√∫ltimo)
 	        printf("%dx^%d", poliResultante[c], c);
 	    }
 	    printed = 1;
 	}
 }
 
-// FunÁ„o Principal 
+// Fun√ß√£o Principal 
 int main () {
 	
-	// Vari·veis
+	// Vari√°veis
 	char enter;
 	int option, x;
 	int poli1[50], poli2 [50], grau1, grau2;
@@ -481,7 +481,7 @@ int main () {
 
 	// Loop para o Menu
 	for (loop = true; loop = true;) {
-		system("cls"); // Limpar o terminal tendo como finalidade ˙nica a estÈtica, j· que a utilizaÁ„o prolongada desse programa pode gerar cÛdigo demais
+		system("cls"); // Limpar o terminal tendo como finalidade √∫nica a est√©tica, j√° que a utiliza√ß√£o prolongada desse programa pode gerar c√≥digo demais
 		printf("Calculadora de Polinomios\n\n1. Calcular o valor de Polinomios\n2. Calcular a soma de Polinomios\n3. Calcular a multiplicacao de Polinomios\n4. Encerrar o programa\n\n> ");
 		scanf("%d", &option);
 		system("cls"); // Limpa terminal
@@ -489,9 +489,9 @@ int main () {
 			
 			printf("Opcao Invalida! Pressione ENTER para voltar ao menu\n"); // Input errado
 			scanf("%c", &enter); 
-			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j· lia o ENTER de quando coloc·vamos a opcÁ„o desejada, ao invÈs de ler depois
+			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j√° lia o ENTER de quando coloc√°vamos a opc√ß√£o desejada, ao inv√©s de ler depois
 			
-		} else if (option == 1) { // Calcular valor do PolinÙmio
+		} else if (option == 1) { // Calcular valor do Polin√¥mio
 		
 			printf("> Calcular o Valor de um Polinomio\n"); 
 			attPoli(poli1, &grau1); // Atualizar o polinomio
@@ -500,50 +500,50 @@ int main () {
 			printf("\nDigite um valor para (x): ");
 			scanf("%d", &x);
 			
-			//FunÁıes
+			//Fun√ß√µes
 			printPoli(poli1, grau1);
 			valorPoli(poli1, grau1, x);
 			
 			// Return do menu
 			printf("\n\n> Pressione ENTER para voltar ao menu\n");
 			scanf("%c", &enter); 
-			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j· lia o ENTER de quando coloc·vamos a opcÁ„o desejada, ao invÈs de ler depois)
+			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j√° lia o ENTER de quando coloc√°vamos a opc√ß√£o desejada, ao inv√©s de ler depois)
 			
-		} else if (option == 2) { // Calcular Soma de PolinÙmios
+		} else if (option == 2) { // Calcular Soma de Polin√¥mios
 			system("cls"); // Limpa Terminal
 			
-			// Atualizar ou Inserir PolinÙmios 1 e 2
+			// Atualizar ou Inserir Polin√¥mios 1 e 2
 			printf("Polinomio 1: "); // Atualizar o Polinomio 1
 			attPoli(poli1, &grau1);
 			
 			printf("Polinomio 2: "); // Ataulizar o Polinomio 2
 			attPoli(poli2, &grau2);
 			
-			// FunÁıes
+			// Fun√ß√µes
 			printPoli(poli1, grau1); // Imprimir Polinomio 1
 			printPoli(poli2, grau2); // Imprimir Polinomio 2
 			somaPoli(poli1, grau1, poli2, grau2); // Fazer a soma de P1 e P2
 			printf("\n\n> Pressione ENTER para voltar ao menu\n");
 			scanf("%c", &enter);
-			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j· lia o ENTER de quando coloc·vamos a opcÁ„o desejada, ao invÈs de ler depois)
+			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j√° lia o ENTER de quando coloc√°vamos a opc√ß√£o desejada, ao inv√©s de ler depois)
 			
-		} else if (option == 3) { // Calcular MultiplicaÁ„o de PolinÙmios
+		} else if (option == 3) { // Calcular Multiplica√ß√£o de Polin√¥mios
 			system("cls"); // Limpa Terminal
 			
-			// Atualizar ou Inserir PolinÙmios 1 e 2
+			// Atualizar ou Inserir Polin√¥mios 1 e 2
 			printf("Polinomio 1: "); // Atualizar o Polinomio 1
 			attPoli(poli1, &grau1);
 			
 			printf("Polinomio 2: "); // Ataulizar o Polinomio 2
 			attPoli(poli2, &grau2);
 			
-			// FunÁıes 
+			// Fun√ß√µes 
 			printPoli(poli1, grau1); // Imprimir Polinomio 1
 			printPoli(poli2, grau2); // Imprimir Polinomio 2
-			multiPoli(poli1, grau1, poli2, grau2); // Fazer a multiplicaÁ„o de P1 e P2
+			multiPoli(poli1, grau1, poli2, grau2); // Fazer a multiplica√ß√£o de P1 e P2
 			printf("\n\n> Pressione ENTER para voltar ao menu\n");
 			scanf("%c", &enter); 
-			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j· lia o ENTER de quando coloc·vamos a opcÁ„o desejada, ao invÈs de ler depois)
+			scanf("%c", &enter); // Colocar duas vezes (motivo indefinido, mas acreditamos que o scanf j√° lia o ENTER de quando coloc√°vamos a opc√ß√£o desejada, ao inv√©s de ler depois)
 			
 		} else if (option == 4) { // Encerrar o programa
 			printf("\nPROGRAMA ENCERRADO...");
